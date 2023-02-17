@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Box overflowX="hidden">
       <Navbar />
-      <Box px={isMobile ? "40px" : "80px"} pt="20px" bg="purpleColor">
+      <Box px={isMobile ? "40px" : "80px"} pt={isMobile ? "50px" : "20px"} bg="purpleColor">
         <FirstLayer />
       </Box>
       <SecondLayer />
