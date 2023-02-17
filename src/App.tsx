@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, useMediaQuery } from "@chakra-ui/react";
+import { Footer, Navbar } from "./components/Layout";
+import {
+  FifthLayer,
+  FirstLayer,
+  FourthLayer,
+  SecondLayer,
+  ThirdLayer,
+} from "./containers";
 
-function App() {
+const App = () => {
+  const [isMobile] = useMediaQuery("(max-width: 991px)");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box overflowX="hidden">
+      <Navbar />
+      <Box px={isMobile ? "40px" : "80px"} pt="20px" bg="purpleColor">
+        <FirstLayer />
+      </Box>
+      <SecondLayer />
+      <ThirdLayer />
+      <FourthLayer />
+      <FifthLayer />
+      <Footer />
+    </Box>
   );
-}
+};
 
 export default App;
