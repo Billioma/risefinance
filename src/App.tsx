@@ -11,7 +11,7 @@ import {
 const App = () => {
   const [isMobile] = useMediaQuery("(max-width: 991px)");
   return (
-    <Box overflowX="hidden">
+    <Box overflowX="hidden" bg="#f7f7f7">
       <Navbar />
       <Box px={isMobile ? "40px" : "80px"} pt={isMobile ? "50px" : "20px"} bg="purpleColor">
         <FirstLayer />
