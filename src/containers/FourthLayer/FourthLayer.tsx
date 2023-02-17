@@ -114,14 +114,12 @@ const FourthLayer = () => {
             transition={{ duration: 1 }}
           >
             <Flex align="center" color="#fff">
-              <Image src={phone} />
+              <Image src={phone} pos="relative" />
               <Box>
                 {logoOpt?.map((data, i) => (
                   <Box
                     bg="purpleColor"
                     key={i}
-                    zIndex={-2}
-                    pos="relative"
                     mb={i !== 2 ? "54px" : ""}
                     borderTopRightRadius="30px"
                     borderBottomRightRadius="30px"
